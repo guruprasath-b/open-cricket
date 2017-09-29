@@ -112,4 +112,4 @@ def es_connection():
     return es_config.es_builder(port=app.config.get('ELASTICSEARCH_PORT'))
 
 if __name__ == "__main__":
-    app.run('127.0.0.1', 9001, debug=app.config.get('DEBUG'))
+    app.run('0.0.0.0', 8080, debug=app.config.get('DEBUG'))
