@@ -5,7 +5,6 @@ from opencricket.chart.syntax_cache import SyntaxCache
 sys.path.append(os.path.dirname(__file__))
 
 import json
-/*from opencricket.config import config*/
 from flask import Flask, request, abort, make_response
 from opencricket.chart.sentence_parser import SentenceParser
 from opencricket.chart.syntax_response import SyntaxResponse
