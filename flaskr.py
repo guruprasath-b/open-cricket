@@ -5,7 +5,7 @@ from opencricket.chart.syntax_cache import SyntaxCache
 sys.path.append(os.path.dirname(__file__))
 
 import json
-import config
+from opencricket.config import config
 from flask import Flask, request, abort, make_response
 from opencricket.chart.sentence_parser import SentenceParser
 from opencricket.chart.syntax_response import SyntaxResponse
@@ -112,4 +112,4 @@ def es_connection():
     return es_config.es_builder(port=app.config.get('ELASTICSEARCH_PORT'))
 
 if __name__ == "__main__":
-    app.run('0.0.0.0', 8080, debug=app.config.get('DEBUG'))
+    app.run('0.0.0.0', 8080, debug=true)
