@@ -19,9 +19,9 @@ def es_fuzzy_match(search_string):
     return '{"query":{"match":{"question":{"query":"%s","fuzziness":3,"prefix_length":2}}}}' % search_string
 
 
-def es_builder(hosts=None, port=9200):
+def es_builder(hosts=None, port=8080):
     if hosts is None:
-        hosts = '127.0.0.1'
+        hosts = '0.0.0.0'
     logger = logging.getLogger('elasticsearch')
     logger.setLevel(logging.WARNING)
     return Elasticsearch(hosts=hosts, port=port, timeout=60, request_timeout=60)
