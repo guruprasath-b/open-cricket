@@ -3,7 +3,7 @@ import redis
 
 class RedisService:
     def __init__(self, namespace='opencricket-syntax-cache'):
-        self.redis = redis.StrictRedis(host='localhost', port=6379, db=0)
+        self.redis = redis.StrictRedis(host='bjxr34fwo-redis.services.clever-cloud.com', port=3028, db=0,password='2pYm9s32PI3aAnSRK1W')
         self.namespace = namespace
 
     def clear_syntax(self):
